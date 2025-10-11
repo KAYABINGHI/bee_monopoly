@@ -26,7 +26,7 @@ class Player(db.Model, SerializerMixin):
             'color': self.color,
             'money': 1500,
             'position': 0,
-            'is_computer': self.is_computer,  # ✅ This is the fix
+            'is_computer': self.is_computer, 
             'properties': [],
             'in_jail': False,
             'jail_turns': 0

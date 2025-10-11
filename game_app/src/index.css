@@ -9,7 +9,9 @@ body {
     "Droid Sans", "Helvetica Neue", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  /* background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); */
+  background: url('./images/steve-johnson-YX6BroSCNpA-unsplash.jpg');
+  background-size: cover;
+  background-position: center;
   min-height: 100vh;
 }
 

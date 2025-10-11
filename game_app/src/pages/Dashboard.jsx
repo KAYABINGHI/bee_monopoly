@@ -95,18 +95,21 @@ export default function Dashboard() {
     setPlayerNames(newNames)
   }
 
-  const formatLastPlayed = (updatedAt) => {
-    const date = new Date(updatedAt)
-    const now = new Date()
-    const diffMs = now - date
-    const diffMins = Math.floor(diffMs / 60000)
+const formatLastPlayed = (updatedAt) => {
+  const date = new Date(updatedAt)
+  const now = new Date()
+  const diffMs = now - date
+  const diffMins = Math.floor(diffMs / 60000)
 
-    if (diffMins < 60) return `${diffMins} minutes ago`
-    const diffHours = Math.floor(diffMins / 60)
-    if (diffHours < 24) return `${diffHours} hours ago`
-    const diffDays = Math.floor(diffHours / 24)
-    return `${diffDays} days ago`
-  }
+  const timeString = date.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })
+
+  if (diffMins < 60) return `${diffMins} minutes ago at ${timeString}`
+  const diffHours = Math.floor(diffMins / 60)
+  if (diffHours < 24) return `${diffHours} hours ago at ${timeString}`
+  const diffDays = Math.floor(diffHours / 24)
+  return `${diffDays} days ago at ${timeString}`
+}
+
 
   return (
     <div className="dashboard-container">

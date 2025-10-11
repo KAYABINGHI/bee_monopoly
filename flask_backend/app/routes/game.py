@@ -77,7 +77,7 @@ def create_game():
 
     initial_state = {
         'currentPlayer': 0,
-        'players': [p.to_dict() for p in players_list],  # ✅ Now includes is_computer
+        'players': [p.to_dict() for p in players_list], 
         'turn': 1,
         'board': board
     }
